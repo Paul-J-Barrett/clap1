@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'clap1'",
+            "cargo": {
+                "args": [
+                    "run",
+                    "--bin=clap1",
+                    "--package=clap1"
+                ],
+                "filter": {
+                    "name": "clap1",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-v","fred.cs"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'clap1'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=clap1",
+                    "--package=clap1"
+                ],
+                "filter": {
+                    "name": "clap1",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-v","fred.cs"],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
